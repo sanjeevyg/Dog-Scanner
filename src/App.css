@@ -1,9 +1,3 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 input {
   width: 0.1px;
   height: 0.1px;
@@ -12,3 +6,222 @@ input {
   position: absolute;
   z-index: -1
 }
+
+.tensor-flow {
+  position: absolute;
+  background: #27233A;
+  z-index: 2000;
+  height: 80vh;
+  width: 50vw;
+  bottom: 132px;
+  right: 80px;
+  border: 2px solid #505168;
+}
+
+.dog-model {
+  display: flex;
+  justify-content: center;
+}
+
+.dog-model img{
+  position: absolute;
+  top: 50px;
+  border: 2px solid white;
+  
+}
+
+.dog-model button {
+  position: absolute;
+  bottom: 80px;
+  padding: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.DogInfo {
+  position: absolute;
+  bottom: 150px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 15px;
+  background: #505168;
+  padding: 10px;
+  transition-delay: 2s;
+  border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #505168;
+}
+
+section {
+  position: relative;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+section .logo {
+  position: fixed;
+  top: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+section .bg {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  height: 100%;
+}
+
+section .content {
+  position: relative;
+  max-width: 650px;
+  z-index: 1;
+}
+
+section .content h2{
+  color: #fff;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+
+section .content p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 20px 0 10px;
+}
+
+section .content a {
+  color: #fff;
+  background: #27233A;
+  font-size: 1em;
+  margin: 20px 0;
+  font-weight: 500;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.copyrightText {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  font-size: 1em;
+  margin: 20px 0 10px;
+  font-style: italic;
+}
+
+.menuToggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background-color: #27233A;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  font-weight: lighter;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: calc(100% - 60px);
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.navigation.active {
+  left: 0px;
+}
+
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.5em;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: #f60f20;
+}
+
+.socialBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialBar ul li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  /* background: red; */
+  padding: 20px;
+  color: #27233A;
+}
+
+.socialBar ul li a {
+  position: relative;
+  display: inline-block;
+  transform: scale(0.6)
+}
+
+.socialBar .email {
+  position: absolute;
+  bottom: 20px;
+  transform: scale(0.6);
+  font-size: 50px;
+  text-decoration: none;
+  color: #27233A;
+}
+
+/* @media (max-wdith: 767px){
+
+} */
+
+
+

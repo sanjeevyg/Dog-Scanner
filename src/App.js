@@ -1,135 +1,64 @@
-import React, { useReducer, useState, useRef } from 'react';
-import * as mobilenet from '@tensorflow-models/mobilenet';
-import * as tf from '@tensorflow/tfjs';
+import React from 'react';
+import { FaAlignJustify } from 'react-icons/fa';
+import { FaFacebookSquare} from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaInstagramSquare } from 'react-icons/fa';
+import { FaCopyright } from 'react-icons/fa';
+import { FaOutdent } from 'react-icons/fa';
+import TensorFlow from './Components/TensorFlow'
 import './App.css';
-import DogComponent from './Components/DogComponent'
-// import WebCamCapture from './Webcam/WebcamCapture';
 
-
-function App() {
-
-  const loadModel = async () => {
-    changeState()
-    const mobilenetModel = await mobilenet.load()
-    setModel(mobilenetModel);
-    changeState()
-  }
-
-  const placeholderFunction = () => {}
-
-  const identify = async () => {
-    changeState()
-    const dogsList = await model.classify(imageRef.current)
-    console.log(dogsList)
-    setDogs(dogsList)
-    renderDogInfo()
-    changeState()
-  }
-
-  const renderDogInfo = () => { 
-    if (dogs.length > 1) {
-      return dogs[0].className
-    }  
-  }
-  
-  const reset = () => {
-    setImageUrl(null);
-    setDogs([])
-    changeState()
-  }
-
-  const triggerClick = () => inputRef.current.click()
-
-  const phases = {
-    initial: 'initial',
-    states: {
-      initial: { 
-        on: { upComingState: "loadingModel"}, 
-        text: "Load Model",
-        action: loadModel
-      },
-      loadingModel: { 
-        on: { upComingState: "awaitingUpload"}, 
-        text: "Loading Model...",
-        action: placeholderFunction
-      },
-      awaitingUpload: { 
-        on: { upComingState: "ready"},
-        text: "Upload Dog Image",
-        action: triggerClick
-      },
-      ready: { 
-        on: { upComingState: 'classifying' }, 
-        showImage: true, 
-        text: "Identify",
-        action: identify
-      },
-      classifying: { 
-        on: { upComingState: "complete"}, 
-        text: "Identifying",
-        action: placeholderFunction
-      },
-      complete: { 
-        on: { upComingState: "awaitingUpload"}, 
-        showImage: true,
-        text: "Reset",
-        action: reset
-      }
+class App extends React.Component {
+    state = {
+        active: false
     }
-  }
 
-  const reducer = (currentState, action) => {
-    if(action === "upComingState") {
-      return phases.states[currentState].on[action]
+    toggleClass = () => {     
+        const currentState = this.state.active   
+        this.setState({active: !currentState})
     }
-    return phases.initial
-  }
 
-  const [state, dispatch] = useReducer(reducer, phases.initial);
-  const [model, setModel] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null);
-  const [dogs, setDogs] = useState([]);
-  const inputRef = useRef();
-  const imageRef = useRef();
-
-
-  const changeState = () => dispatch('upComingState');
-  
-  const handleUpload = event => {
-    const { files } = event.target;
-    if (files.length > 0) {
-      const url = URL.createObjectURL(files[0]);
-      setImageUrl(url);
-      changeState()
+    render() {
+     
+        return(
+            <body>
+                <section>
+                    <div className='logo'>Dog Scanner</div>
+                    <img alt="dog" src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2020/07/09151754/Golden-Retriever-puppy-standing-outdoors-500x486.jpg" className="bg"/>
+                        <div className="content">
+                             <h2 className="second-heading">Lets know <br/>More About Your Dog</h2>
+                            <p>
+                            Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half
+                            a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
+                            </p>
+                            <a href={"#"}>Get Started </a>    
+                        </div>
+                        <div className="tensor-flow">
+                            <TensorFlow />
+                        </div>
+                    <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p>
+                </section> 
+        <div className= {this.state.active ? "menuToggle active": "menuToggle"} onClick={this.toggleClass}>{this.state.active ? <FaOutdent size={40}/> :<FaAlignJustify size={40}/>}</div>
+                <div className= {this.state.active ? "navigation active": "navigation"} onClick={this.toggleClass}>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div className= {this.state.active ? "socialBar active": "socialBar"} onClick={this.toggleClass}>
+                        <ul>
+                            <li><a href="#"></a><FaFacebookSquare size={30}/></li>
+                            <li><a href="#"></a><FaTwitter size={30}/></li>
+                            <li><a href="#"></a><FaInstagramSquare size={30}/></li>
+                        </ul>
+                        <a href="yogi.sjv@gmail.com" class="email">@</a>
+                    </div>
+                </div>
+                
+            </body>
+        )   
     }
-  }
+}
 
-  const {showImage = false} = phases.states[state]
-
-  return (
-    <div className="App" >
-      {showImage && <img alt="upload-preview" src={imageUrl} ref={imageRef} />}
-      <input type="file" accept="image/*" capture="camera" ref={inputRef} onChange={handleUpload}/>
-      <button onClick={phases.states[state].action}>{phases.states[state].text}</button>
-      <div className="DogInfo">
-        {renderDogInfo()}
-        <DogComponent/>
-      </div>
-    </div>
-  );
-}  
-
-export default App;
-
-
-
-  // const phases = {
-  //   initial: { next: 'Load Model', action: loadModel },
-  //   loadingModel: { next: 'Loading Model...', action: placeholderFunction},
-  //   awaitingUpload: { next: 'Upload Model', action: triggerClick},
-  //   ready: { next: 'Identify', action: identify},
-  //   classifying: { next: 'Identifying', action: placeholderFunction},
-  //   complete: { next: 'Reset', action: restart}
-  // 
-
-
+export default App
