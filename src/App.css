@@ -52,13 +52,27 @@ input {
   
 }
 
-.dog-model button {
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.dog-model .btn1 {
   position: absolute;
   bottom: 80px;
   padding: 2px;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
 }
+
+.dog-model .btn2 {
+  position: absolute;
+  bottom: 40px;
+  padding: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
 
 .DogInfo {
   position: absolute;
