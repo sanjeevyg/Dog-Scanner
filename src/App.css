@@ -10,13 +10,35 @@ input {
 .tensor-flow {
   position: absolute;
   background: #27233A;
-  z-index: 2000;
+  z-index: -1;
   height: 80vh;
   width: 50vw;
   bottom: 132px;
   right: 80px;
   border: 2px solid #505168;
 }
+
+.tensor-flow.active {
+  z-index: 998;
+  transition: 0.2s ease;
+}
+
+.get-started {
+  transition: background .5s ease-in, transform .25s;
+}
+
+.get-started.active {
+  background: red;
+}
+
+.get-started:hover {
+  background: red;
+  transform: scale(1.1);
+}
+
+
+
+
 
 .dog-model {
   display: flex;
@@ -141,7 +163,13 @@ section .content a {
   z-index: 1000;
   color: white;
   font-weight: lighter;
+  transition: background .25s ease-in;
 }
+.menuToggle:hover {
+  background: red;
+  /* transform: scale(1.2); */
+}
+
 
 .navigation {
   position: fixed;
@@ -177,11 +205,15 @@ section .content a {
   color: #111;
   text-decoration: none;
   font-weight: 300;
+
+  transition: transform .5s;
 }
 
 .navigation ul li a:hover {
   color: #f60f20;
+  transform: scale(1.2);
 }
+
 
 .socialBar {
   position: absolute;
@@ -202,7 +234,14 @@ section .content a {
   /* background: red; */
   padding: 20px;
   color: #27233A;
+  transition: transform .5s;
 }
+
+.socialBar ul li:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
 
 .socialBar ul li a {
   position: relative;
@@ -217,7 +256,16 @@ section .content a {
   font-size: 50px;
   text-decoration: none;
   color: #27233A;
+
+  transition: transform .5s;
 }
+
+.socialBar .email:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+
 
 /* @media (max-wdith: 767px){
 

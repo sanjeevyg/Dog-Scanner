@@ -10,13 +10,20 @@ import './App.css';
 
 class App extends React.Component {
     state = {
-        active: false
+        active: false, 
+        tensorFlowActive: false
+
     }
 
     toggleClass = () => {     
         const currentState = this.state.active   
         this.setState({active: !currentState})
     }
+
+    toggleTensorFlow = () => {     
+      const currentState = this.state.tensorFlowActive 
+      this.setState({tensorFlowActive: !currentState})
+  }
 
     render() {
      
@@ -31,22 +38,22 @@ class App extends React.Component {
                             Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half
                             a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
                             </p>
-                            <a href={"#"}>Get Started </a>    
+                            <a href={"#"} className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</a>    
                         </div>
-                        <div className="tensor-flow">
+                        <div className={this.state.tensorFlowActive ? "tensor-flow active": "tensor-flow"} >
                             <TensorFlow />
                         </div>
                     <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p>
                 </section> 
         <div className= {this.state.active ? "menuToggle active": "menuToggle"} onClick={this.toggleClass}>{this.state.active ? <FaOutdent size={40}/> :<FaAlignJustify size={40}/>}</div>
-                <div className= {this.state.active ? "navigation active": "navigation"} onClick={this.toggleClass}>
+                <div className= {this.state.active ? "navigation active": "navigation"}>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Work</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                    <div className= {this.state.active ? "socialBar active": "socialBar"} onClick={this.toggleClass}>
+                    <div className={this.state.active ? "socialBar active": "socialBar"} >
                         <ul>
                             <li><a href="#"></a><FaFacebookSquare size={30}/></li>
                             <li><a href="#"></a><FaTwitter size={30}/></li>
