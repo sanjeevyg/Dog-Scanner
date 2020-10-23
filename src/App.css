@@ -1,15 +1,21 @@
+@font-face {
+  font-family: Gidole-Regular;
+  src: url(/Gidole-Regular.otf);
+}
+
+
 input {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  z-index: -1
+  z-index: -1;
 }
 
 .tensor-flow {
   position: absolute;
-  background: #27233A;
+  background: #627656;
   z-index: -1;
   height: 80vh;
   width: 50vw;
@@ -28,17 +34,14 @@ input {
 }
 
 .get-started.active {
-  background: red;
+  background: #942911;
+  /* color: black; */
 }
 
 .get-started:hover {
-  background: red;
+  background: #942911;
   transform: scale(1.1);
 }
-
-
-
-
 
 .dog-model {
   display: flex;
@@ -61,26 +64,26 @@ input {
   position: absolute;
   bottom: 80px;
   padding: 2px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-family: 'Gidole-Regular';
+  font-size: 15px;
 }
 
 .dog-model .btn2 {
   position: absolute;
   bottom: 40px;
   padding: 2px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-family: 'Gidole-Regular';
+  font-size: 15px;
 }
 
 
 .DogInfo {
   position: absolute;
   bottom: 150px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gidole-Regular';
   color: white;
   font-size: 15px;
-  background: #505168;
+  background: #38564E;
   padding: 10px;
   transition-delay: 2s;
   border-radius: 5px;
@@ -90,11 +93,11 @@ input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gidole-Regular';
 }
 
 body {
-  background: #505168;
+  background: #593837;
 }
 
 section {
@@ -143,7 +146,7 @@ section .content p {
 
 section .content a {
   color: #fff;
-  background: #27233A;
+  background: #627656;
   font-size: 1em;
   margin: 20px 0;
   font-weight: 500;
@@ -168,7 +171,7 @@ section .content a {
   width: 60px;
   height: 60px;
   display: flex;
-  background-color: #27233A;
+  background-color: #627656;
   justify-content: center;
   align-items: center;
   background-position: center;
@@ -180,7 +183,7 @@ section .content a {
   transition: background .25s ease-in;
 }
 .menuToggle:hover {
-  background: red;
+  background: #942911;
   /* transform: scale(1.2); */
 }
 
@@ -224,7 +227,7 @@ section .content a {
 }
 
 .navigation ul li a:hover {
-  color: #f60f20;
+  color: #942911;
   transform: scale(1.2);
 }
 
@@ -245,14 +248,14 @@ section .content a {
   position: relative;
   display: inline-block;
   list-style: none;
-  /* background: red; */
+  /* background: #942911; */
   padding: 20px;
-  color: #27233A;
+  color: #627656;
   transition: transform .5s;
 }
 
 .socialBar ul li:hover {
-  color: red;
+  color: #942911;
   transform: scale(1.2);
 }
 
@@ -269,16 +272,56 @@ section .content a {
   transform: scale(0.6);
   font-size: 50px;
   text-decoration: none;
-  color: #27233A;
+  color: #627656;
 
   transition: transform .5s;
 }
 
 .socialBar .email:hover {
-  color: red;
+  color: #942911;
   transform: scale(1.1);
 }
 
+.runner-dog {
+  background:url("./Images/Dog.png");
+  margin-top: 150px;
+  width: 500px;
+  height: 280px;
+  z-index: 100;
+  animation: walk 1s steps(5) infinite, forward 4s linear infinite;
+  
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 2200px;
+  }
+}
+.DogInfo.NoRender {
+  background: transparent;
+}
+
+
+
+/* .road {
+  border-bottom: 1px dashed white;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+
+} */
+
+
+/* @keyframes forward{
+  0%{
+    transform:translateX(-100px);
+  }
+  100%{
+    translate:translateX(1200px);
+  }
+} */
 
 
 /* @media (max-wdith: 767px){

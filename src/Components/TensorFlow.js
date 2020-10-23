@@ -3,7 +3,7 @@ import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import WebCam from './Webcam';
 import Webcam from "react-webcam";
-
+import Runner from './DogRunning';
 
 
 function App() {
@@ -133,20 +133,16 @@ function App() {
         <button className="btn1" onClick={phases.states[state].action} >{phases.states[state].text}
             <input type="file" accept="image/*" capture="camera" ref={inputRef} onChange={handleUpload}/>
         </button>
-        <button className="btn2" onClick={changeButtonStatus} >{phases.states[state].text1}</button> 
-
-
+        <Runner id="runner"/>
         {
         (button) ? 
-        <button className="btn2" onClick={changeButtonStatus} >{phases.states[state].text1}  {<WebCam updateImageURL={updateImageURL}/>}</button> 
-        :
-        <button className="btn1" onClick={phases.states[state].action} >{phases.states[state].text}
-            <input type="file" accept="image/*" capture="camera" ref={inputRef} onChange={handleUpload}/>
-        </button>
+        <button className="btn2" onClick={changeButtonStatus} >{<WebCam updateImageURL={updateImageURL}/>}</button> 
+        : 
+        <button className="btn2" onClick={changeButtonStatus} >{phases.states[state].text1}</button>   
         }
 
       </div>
-      <div className="DogInfo">
+      <div className= {dogs.length > 1 ? "DogInfo": "DogInfo NoRender"}>
         {renderDogInfo()}
       </div>
     </div>

@@ -9,6 +9,7 @@ import TensorFlow from './Components/TensorFlow'
 import './App.css';
 import WebCam from './Components/Webcam';
 
+
 class App extends React.Component {
     state = {
         active: false, 
@@ -43,6 +44,7 @@ class App extends React.Component {
                             a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
                             </p>
                             <a href={"#"} className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</a>    
+                           
                         </div>
                         <div className={this.state.tensorFlowActive ? "tensor-flow active": "tensor-flow"} >
                             <TensorFlow />
