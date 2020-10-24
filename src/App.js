@@ -8,6 +8,8 @@ import { FaOutdent } from 'react-icons/fa';
 import TensorFlow from './Components/TensorFlow'
 import './App.css';
 import WebCam from './Components/Webcam';
+import SignInForm from './Components/Form';
+
 
 
 class App extends React.Component {
@@ -35,13 +37,15 @@ class App extends React.Component {
             <body>
                 <section>
                     <div className='logo'>Dog Scanner</div>
-                    <img alt="dog" src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2020/07/09151754/Golden-Retriever-puppy-standing-outdoors-500x486.jpg" className="bg"/>
+                    <img src={require("./Images/husky3.png")} alt="dog"  className="bg"/>
                         <div className="content">
-                             <h2 className="second-heading">Lets know <br/>More About Your Dog</h2>
+                             <h2 className="second-heading">What <br/> Breed Is Your Dog?</h2>
                              {/* <WebCam/> */}
                             <p>
-                            Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half
-                            a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
+                            The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf)is a domesticated carnivore of the family Canidae. It is part of the 
+                            wolf-like canids,and is the most widely abundant terrestrial carnivore.The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated,
+                             which implies that the direct ancestor of the dog is extinct. The dog was the first species to be domesticated, and has been selectively bred over millennia for various behaviors, sensory capabilities, 
+                             and physical attributes
                             </p>
                             <a href={"#"} className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</a>    
                            
@@ -55,9 +59,9 @@ class App extends React.Component {
                 <div className= {this.state.active ? "navigation active": "navigation"}>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Sign In</a> </li>
                         <li><a href="#">Contact</a></li>
+                        <li><a href="#">Sign Up</a></li>
                     </ul>
                     <div className={this.state.active ? "socialBar active": "socialBar"} >
                         <ul>
