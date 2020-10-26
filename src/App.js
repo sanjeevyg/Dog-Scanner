@@ -45,7 +45,7 @@ class App extends React.Component {
                             The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf)is a domesticated carnivore of the family Canidae. It is part of the 
                             wolf-like canids,and is the most widely abundant terrestrial carnivore.The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated,
                              which implies that the direct ancestor of the dog is extinct. The dog was the first species to be domesticated, and has been selectively bred over millennia for various behaviors, sensory capabilities, 
-                             and physical attributes
+                             and physical attributes.
                             </p>
                             <a href={"#"} className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</a>    
                            
