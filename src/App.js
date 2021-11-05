@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaAlignJustify } from 'react-icons/fa';
-import { FaFacebookSquare} from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
-import { FaInstagramSquare } from 'react-icons/fa';
-import { FaCopyright } from 'react-icons/fa';
-import { FaOutdent } from 'react-icons/fa';
+import { FaAlignJustify, FaFacebookSquare, FaTwitter, FaInstagramSquare, FaCopyright, FaOutdent } from 'react-icons/fa';
+// import { FaFacebookSquare} from 'react-icons/fa';
+// import { FaTwitter } from 'react-icons/fa';
+// import { FaInstagramSquare } from 'react-icons/fa';
+// import { FaCopyright } from 'react-icons/fa';
+// import { FaOutdent } from 'react-icons/fa';
 import TensorFlow from './Components/TensorFlow'
 import './App.css';
 import WebCam from './Components/Webcam';
