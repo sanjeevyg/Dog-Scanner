@@ -102,7 +102,6 @@ function App() {
   const [button, setButton] = useState(false);
 
   const changeButtonStatus = () => {
-      console.log("hello")
       setButton(!(button))
       console.log(button)
   }
