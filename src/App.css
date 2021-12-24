@@ -97,17 +97,30 @@ input {
 .dog-model .btn1 {
   position: absolute;
   bottom: 80px;
-  padding: 2px;
-  font-family: 'Gidole-Regular';
-  font-size: 15px;
+  padding: 5px 5px;
+  /* font-family: 'Gidole-Regular'; */
+  font-size: 1rem;
+  background: #ffffff;
+  color: #271919;
+  border: none;
+  font-weight: bolder;
+  border-radius: .2em;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, .7));
+  
 }
 
 .dog-model .btn2 {
   position: absolute;
   bottom: 40px;
-  padding: 2px;
-  font-family: 'Gidole-Regular';
-  font-size: 15px;
+  padding: 5px 5px;
+  /* font-family: 'Gidole-Regular'; */
+  font-size: 1rem;
+  background: #ffffff;
+  font-weight: bolder;
+  color: #271919;
+  border: none;
+  border-radius: .2em;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, .7));
 }
 
 
@@ -167,7 +180,7 @@ section .logo {
 
 section .content {
   position: fixed;
-  top: 30vh;
+  top: 33vh;
   max-width: 650px;
   z-index: 1;
 }
@@ -210,7 +223,7 @@ section .content p {
 
 section .content button {
   position: fixed;
-  top: 59vh;
+  top: 62vh;
   /* left: 6vw; */
   color: #fff;
   background: #4C5F76;
@@ -221,6 +234,7 @@ section .content button {
   border: none;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
   border-radius: .2em;
+  cursor: pointer;
   /* display: inline-block; */
   /* text-decoration: none; */
 }
@@ -398,12 +412,14 @@ section .content button {
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, .3));
 }
 
-/* .paw2 {
+.paw2 {
   position: fixed;
-  color: rgb(219, 164, 102);
-  top: 90vh;
-  left: 20vw;
-} */
+  color: rgb(255, 255, 255);
+  top: 10vh;
+  left: 80vw;
+  opacity: 0.07;
+  transform: rotate(-29deg);
+}
 
 .paw3 {
   position: fixed;

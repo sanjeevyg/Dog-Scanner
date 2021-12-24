@@ -39,7 +39,7 @@ class App extends React.Component {
                     {/* <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p> */}
                     <div>
                         <div><FaPaw size={150} className="paws paw1"/></div>
-                        {/* <div><FaPaw size={30} className="paws paw2"/></div> */}
+                        {/* <div><FaPaw size={200} className="paws paw2"/></div> */}
                         <div><FaPaw size={200} className="paws paw3"/></div>
                         <div><FaPaw size={100} className="paws paw4"/></div>
                     </div>
