@@ -1,8 +1,7 @@
-import React, { useReducer, useState, useRef, useCallback } from 'react';
+import React, { useReducer, useState, useRef} from 'react';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import WebCam from './Webcam';
-import Webcam from "react-webcam";
 import Runner from './DogRunning';
 
 

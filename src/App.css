@@ -1,6 +1,13 @@
-@font-face {
+/* @font-face {
   font-family: Gidole-Regular;
   src: url(/Gidole-Regular.otf);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -18,10 +25,9 @@ input {
   background: #4C5F76;
   z-index: -1;
   height: 80vh;
-  width: 50vw;
-  bottom: 132px;
-  right: 80px;
-  /* box-shadow: 10px 10px 30px rgb(178, 203, 166); */
+  width: 47vw;
+  bottom: 10vh;
+  right: 4.3vw;
   border-radius: 5px;
 }
 
@@ -118,15 +124,10 @@ input {
   border-radius: 5px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gidole-Regular';
-}
 
 body {
   background: #6B2737;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",  Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 section {
@@ -150,12 +151,13 @@ section .logo {
 section .bg {
   position: absolute;
   top: 0;
-  right: 60px;
-  height: 100%;
+  left: 48vw;
+  height: 100vh;
 }
 
 section .content {
-  position: relative;
+  position: fixed;
+  top: 30vh;
   max-width: 650px;
   z-index: 1;
 }
@@ -173,13 +175,16 @@ section .content p {
   margin: 20px 0 10px;
 }
 
-section .content a {
+section .content button {
+  position: fixed;
+  top: 50vh;
+  left: 6vw;
   color: #fff;
   background: #4C5F76;
-  font-size: 1em;
+  font-size: 1.3em;
   margin: 20px 0;
   font-weight: 500;
-  padding: 10px 30px;
+  padding: 9px 27px;
   display: inline-block;
   text-decoration: none;
 }
@@ -332,30 +337,6 @@ section .content a {
 .DogInfo.NoRender {
   background: transparent;
 }
-
-
-
-/* .road {
-  border-bottom: 1px dashed white;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-
-} */
-
-
-/* @keyframes forward{
-  0%{
-    transform:translateX(-100px);
-  }
-  100%{
-    translate:translateX(1200px);
-  }
-} */
-
-
-/* @media (max-wdith: 767px){
-
-} */
 
 
 

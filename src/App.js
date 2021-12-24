@@ -1,16 +1,7 @@
 import React from 'react';
-import { FaAlignJustify, FaFacebookSquare, FaTwitter, FaInstagramSquare, FaCopyright, FaOutdent } from 'react-icons/fa';
-// import { FaFacebookSquare} from 'react-icons/fa';
-// import { FaTwitter } from 'react-icons/fa';
-// import { FaInstagramSquare } from 'react-icons/fa';
-// import { FaCopyright } from 'react-icons/fa';
-// import { FaOutdent } from 'react-icons/fa';
+import { FaAlignJustify, FaFacebookSquare, FaTwitter, FaInstagramSquare, FaLinkedin, FaOutdent } from 'react-icons/fa';
 import TensorFlow from './Components/TensorFlow'
 import './App.css';
-import WebCam from './Components/Webcam';
-import SignInForm from './Components/Form';
-
-
 
 class App extends React.Component {
     state = {
@@ -32,30 +23,23 @@ class App extends React.Component {
     
 
     render() {
-     
         return(
             <body>
                 <section>
                     <div className='logo'>Dog Scanner</div>
                     <img src={require("./Images/husky3.png")} alt="dog"  className="bg"/>
                         <div className="content">
-                             <h2 className="second-heading">What <br/> Breed Is Your Dog?</h2>
-                             {/* <WebCam/> */}
-                            <p>
-                            The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf)is a domesticated carnivore of the family Canidae. It is part of the 
-                            wolf-like canids,and is the most widely abundant terrestrial carnivore.The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated,
-                             which implies that the direct ancestor of the dog is extinct. The dog was the first species to be domesticated, and has been selectively bred over millennia for various behaviors, sensory capabilities, 
-                             and physical attributes.
-                            </p>
-                            <a href={"#"} className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</a>    
-                           
+                             <h2 className="second-heading">“Did you know that there are over 300 words for love in canine?” – Gabriel Zevin</h2>
+                            <button className={this.state.tensorFlowActive ? "get-started active": "get-started"} onClick={this.toggleTensorFlow}> {this.state.tensorFlowActive ?  "Close Identifier" : "Get Started" }</button>    
                         </div>
                         <div className={this.state.tensorFlowActive ? "tensor-flow active": "tensor-flow"} >
                             <TensorFlow />
                         </div>
-                    <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p>
+                    {/* <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p> */}
                 </section> 
-                <div className= {this.state.active ? "menuToggle active": "menuToggle"} onClick={this.toggleClass}>{this.state.active ? <FaOutdent size={40}/> :<FaAlignJustify size={40}/>}</div>
+                <div className= {this.state.active ? "menuToggle active": "menuToggle"} onClick={this.toggleClass}>
+                    {this.state.active ? <FaOutdent size={40}/> :<FaAlignJustify size={40}/>}
+                </div>
                 <div className= {this.state.active ? "navigation active": "navigation"}>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -65,9 +49,10 @@ class App extends React.Component {
                     </ul>
                     <div className={this.state.active ? "socialBar active": "socialBar"} >
                         <ul>
-                            <li><a href="#"></a><FaFacebookSquare size={30}/></li>
-                            <li><a href="#"></a><FaTwitter size={30}/></li>
-                            <li><a href="#"></a><FaInstagramSquare size={30}/></li>
+                            <li><a href="#"></a><FaLinkedin size={31}/></li>
+                            <li><a href="#"></a><FaFacebookSquare size={31}/></li>
+                            <li><a href="#"></a><FaTwitter size={31}/></li>
+                            <li><a href="#"></a><FaInstagramSquare size={31}/></li>
                         </ul>
                         <a href="yogi.sjv@gmail.com" className="email">@</a>
                     </div>
