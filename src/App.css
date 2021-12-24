@@ -150,9 +150,10 @@ section {
   min-height: 100vh;
 }
 
-section .logo {
+.logo {
   position: fixed;
   top: 30px;
+  /* left: 9.5vw; */
   color: white;
   font-weight: 700;
   font-size: 2em;
@@ -169,10 +170,10 @@ section .logo {
 
 .doggy {
   position: absolute;
-  top: .5vh;
-  left: 9vw;
-  height: 50vh;
-  opacity: 0.09;
+  top: 2.5vh;
+  left: 18.5vw;
+  height: 5vh;
+  /* opacity: 0.09; */
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
@@ -326,6 +327,7 @@ section .content button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .socialBar ul li {
