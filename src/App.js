@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaAlignJustify, FaTwitter, FaInstagramSquare, FaLinkedin, FaOutdent, FaPaw, FaGithub, FaDog} from 'react-icons/fa';
+import { FaAlignJustify, FaTwitter, FaInstagramSquare, FaLinkedin, FaOutdent, FaPaw, FaGithub, FaDog, FaFemale, FaCommentAlt} from 'react-icons/fa';
 import TensorFlow from './Components/TensorFlow'
 import './App.css';
 
@@ -43,6 +43,7 @@ class App extends React.Component {
                         <div><FaPaw size={200} className="paws paw3"/></div>
                         <div><FaPaw size={100} className="paws paw4"/></div>
                     </div>
+                    <button id="feedbackButton">Feedback</button>
                 </section> 
                 <div className= {this.state.active ? "menuToggle active": "menuToggle"} onClick={this.toggleClass}>
                     {this.state.active ? <FaOutdent size={45}/> :<FaAlignJustify size={45}/>}
@@ -60,9 +61,10 @@ class App extends React.Component {
                             <li><a href="#"></a><FaGithub size={36}/></li>
                             <li><a href="#"></a><FaTwitter size={36}/></li>
                             <li><a href="#"></a><FaInstagramSquare size={36}/></li>
+                          
                         </ul>
-                        <a href="yogi.sjv@gmail.com" className="email">@</a>
                     </div>
+                    
                 </div>
                 
             </body>
