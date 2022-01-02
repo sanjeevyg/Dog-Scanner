@@ -64,7 +64,7 @@ function App() {
       },
       awaitingUpload: { 
         on: { upComingState: "ready"},
-        text: "Upload Dog Image",
+        text: "Upload Image",
         text1: "Capture Image",
         action: triggerClick,
         action1: captureImage
@@ -129,7 +129,7 @@ function App() {
       
       <div className="btn">
         <button className="btn1" onClick={phases.states[state].action} >{phases.states[state].text}
-            <input type="file" accept="image/*" capture="camera" ref={inputRef} onChange={handleUpload}/>
+            <input type="file" id="uploadInput" accept="image/*" capture="camera" ref={inputRef} onChange={handleUpload}/>
         </button>
         <Runner id="runner"/>
         {
