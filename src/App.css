@@ -1,8 +1,3 @@
-/* @font-face {
-  font-family: Gidole-Regular;
-  src: url(/Gidole-Regular.otf);
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +5,14 @@
   overflow: hidden;
 }
 
-input {
+/* input {
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  z-index: -1;
-}
+  z-index: 1;
+} */
 
 .tensor-flow {
   position: absolute;
@@ -225,7 +220,6 @@ section .content p {
 section .content button {
   position: fixed;
   top: 62vh;
-  /* left: 6vw; */
   color: #fff;
   background: #4C5F76;
   font-size: 1.5em;
@@ -265,11 +259,10 @@ section .content button {
   z-index: 1000;
   color: white;
   font-weight: lighter;
-  transition: background .25s ease-in;
+  transition: .25s ease-in;
 }
 .menuToggle:hover {
   background: #F45B69;
-  /* transform: scale(1.2); */
 }
 
 
@@ -316,7 +309,6 @@ section .content button {
   transform: scale(1.2);
 }
 
-
 .socialBar {
   position: absolute;
   top: 0;
@@ -328,41 +320,29 @@ section .content button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  z-index: 99;
 }
 
 .socialBar ul li {
   position: relative;
   display: inline-block;
   list-style: none;
-  /* background: #F45B69; */
   padding: 20px;
-  color: #4C5F76;
-  transition: transform .5s;
+  right: .2rem;
+  transition: .5s;
 }
 
 .socialBar ul li:hover {
   color: #F45B69;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 
 .socialBar ul li a {
+  color: #4C5F76;
   position: relative;
   display: inline-block;
-  transform: scale(0.6)
 }
-
-/* .socialBar .email {
-  position: absolute;
-  bottom: 20px;
-  transform: scale(0.6);
-  font-size: 50px;
-  text-decoration: none;
-  color: #4C5F76;
- 
-
-  transition: transform .5s;
-} */
 
 
 #feedbackButton {

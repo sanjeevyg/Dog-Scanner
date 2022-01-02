@@ -1,0 +1,187 @@
+.contact {
+    position: fixed;
+    background-color:rgb(250, 250, 250);
+    top: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",  Helvetica, Arial, "Lucida Grande", sans-serif; 
+    margin-left: 7vw;
+}
+
+.openBox {
+    z-index: 9999
+}
+
+#contactLogo {
+    position: fixed;
+    top: 3.5rem;
+    left: 9rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+}
+
+#contactLogo div {
+    margin-left: 1rem;
+}
+
+
+#closeBtn:hover {
+    background: rgb(221, 55, 77);
+    color: rgb(255, 255, 255);
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+#btnIcon {
+    margin-left: .3rem;
+}
+
+.btnContainer {
+    position: fixed;
+    top: 5.9rem;
+    right: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+#letsTalk {
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 4rem;
+    font-size: 3vw;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+#chatIcon {
+    margin-right: 1rem;
+}
+
+#messageInstruction {
+    position: relative;
+    margin-bottom: 1rem;
+    align-self: flex-end;
+    padding-left: 1rem;
+    letter-spacing: .1rem;
+    border-left: 3px solid rgb(29, 80, 219);
+    font-size: 1.3rem;
+}
+
+#messageInstruction span {
+    color: rgb(29, 80, 219);
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 90vh;
+    max-width: 35vw;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: flex-start;
+    max-width: 35vw;
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(10, 10, 10, .7);
+    flex-direction: column;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.userInfo input {
+    height: 5vh;
+    width: 35vw;
+    margin-top: 1rem;
+    display: flex;
+    text-align: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: .1rem;
+}
+
+textarea {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    height: 12rem;
+    width: 35vw;
+    font-size: 1rem;
+    border: none;
+    font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",  Helvetica, Arial, "Lucida Grande", sans-serif; 
+    border-radius: 5px;
+}
+
+.btnForm input{
+    border: none;
+    background-color: rgb(29, 80, 219);
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgb(253, 253, 253);
+    margin-bottom: 5rem;
+    margin-top: 1.3rem;
+    border-radius: 5px;
+}
+
+.btnForm input:hover {
+    background: rgb(61, 4, 195);
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+
+    #letsTalk {
+        font-size: medium;
+    }
+
+    .contact {
+        max-height: 100vh;
+        max-width: 100vw; 
+    }
+    .form-container {
+        max-height: 90vh;
+        max-width: 90vw;
+    }
+    
+    .userInfo input{
+        min-width: 90vw;
+        height: 10vw;
+    }
+
+    textarea {
+        min-width: 90vw;
+        height: 40vw;
+    }
+
+    #messageInstruction {
+        font-size: medium;
+    }
+  }
+
+

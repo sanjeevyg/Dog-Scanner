@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaAlignJustify, FaTwitter, FaInstagramSquare, FaLinkedin, FaOutdent, FaPaw, FaGithub, FaDog, FaFemale, FaCommentAlt} from 'react-icons/fa';
+import { FaAlignJustify, FaTwitter, FaInstagramSquare, FaLinkedin, FaOutdent, FaPaw, FaGithub, FaDog} from 'react-icons/fa';
 import TensorFlow from './Components/TensorFlow'
 import './App.css';
+import Form from './Components/Form/Form.js'
 
 class App extends React.Component {
     state = {
@@ -25,7 +26,6 @@ class App extends React.Component {
                 <section>
                     <div className='logo'>D<FaPaw size={31} id="paw"/>g Scanner</div>
                     <img src={require("./Images/husky3.png")} alt="dog"  className="bg"/>
-                    {/* <img src={require("./Images/sittingDog.png")} alt="dog"  className="doggy"/> */}
                         <div className="content">
                              <h2 className="second-heading">
                              <span id="question-first-part">Did you know that there are</span> 
@@ -36,10 +36,8 @@ class App extends React.Component {
                         <div className={this.state.tensorFlowActive ? "tensor-flow active": "tensor-flow"} >
                             <TensorFlow />
                         </div>
-                    {/* <p className="copyrightText">@2020 <FaCopyright /> Sanjeev Yogi</p> */}
                     <div>
                         <div><FaPaw size={150} className="paws paw1"/></div>
-                        {/* <div><FaPaw size={200} className="paws paw2"/></div> */}
                         <div><FaPaw size={200} className="paws paw3"/></div>
                         <div><FaPaw size={100} className="paws paw4"/></div>
                     </div>
@@ -49,18 +47,14 @@ class App extends React.Component {
                     {this.state.active ? <FaOutdent size={45}/> :<FaAlignJustify size={45}/>}
                 </div>
                 <div className= {this.state.active ? "navigation active": "navigation"}>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign In</a> </li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                    </ul>
+                    <Form key="form"/>
                     <div className={this.state.active ? "socialBar active": "socialBar"} >
                         <ul>
-                            <li><a href="#"></a><FaLinkedin size={36}/></li>
-                            <li><a href="#"></a><FaGithub size={36}/></li>
-                            <li><a href="#"></a><FaTwitter size={36}/></li>
-                            <li><a href="#"></a><FaInstagramSquare size={36}/></li>
+                            <li><a href="https://www.linkedin.com/in/sanjeevyogi"  target="_blank" rel="noopener noreferrer"><FaLinkedin size={41}/></a></li>
+                            <li><a href="https://github.com/sanjeevyg" className="socialBarIcon" target="_blank" rel="noopener noreferrer"><FaGithub size={41}/></a></li>
+                            <li><a href="https://twitter.com/syogifse" className="socialBarIcon" target="_blank" rel="noopener noreferrer" ><FaTwitter size={41}/></a></li>
+                            <li><a href="https://www.instagram.com/ygsjv001/" className="socialBarIcon" target="_blank" rel="noopener noreferrer" ><FaInstagramSquare size={41}/></a></li>
+                            
                           
                         </ul>
                     </div>
