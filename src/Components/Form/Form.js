@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-export default function Contact() {
+export default function Form() {
 
     const form = useRef()
     const sendEmail = (e) => {
