@@ -1,15 +1,22 @@
 .contact {
     position: fixed;
-    background-color:rgb(250, 250, 250);
+    background-color: rgb(250, 249, 249);
     top: 0;
-    min-height: 100vh;
+    height: 100vh;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light",  Helvetica, Arial, "Lucida Grande", sans-serif; 
-    margin-left: 7vw;
+    overflow: auto;
+}
+
+.form-container {
+    position: absolute;
+    margin-bottom: 7rem;
+    bottom: 20%;
+    top: 5%;
 }
 
 .openBox {
@@ -29,14 +36,6 @@
     margin-left: 1rem;
 }
 
-
-#closeBtn:hover {
-    background: rgb(221, 55, 77);
-    color: rgb(255, 255, 255);
-    transition: 1s ease;
-    cursor: pointer;
-}
-
 #btnIcon {
     margin-left: .3rem;
 }
@@ -53,13 +52,14 @@
 
 #letsTalk {
     position: relative;
-    margin-top: 3vh;
-    margin-bottom: 4rem;
+    top: .5rem;
+    margin-bottom: 5rem;
     font-size: 3vw;
     font-weight: bolder;
     display: flex;
     align-items: center;
     align-self: flex-start;
+    min-height: 3.5rem;
 }
 
 #chatIcon {
@@ -74,6 +74,7 @@
     letter-spacing: .1rem;
     border-left: 3px solid rgb(29, 80, 219);
     font-size: 1.3rem;
+    min-height: 3.2rem;
 }
 
 #messageInstruction span {
@@ -100,6 +101,7 @@
     font-weight: bold;
     color: rgb(10, 10, 10, .7);
     flex-direction: column;
+    /* min-height: 90%; */
 }
 
 .userInfo {
@@ -108,12 +110,22 @@
     margin-top: 2rem;
 }
 
+
+.userInfo label {
+    display: inline-block;
+    /* flex-direction: column; */
+    bottom: 2rem;
+    /* background-color: brown; */
+    min-height: 2rem;
+}
+
 .userInfo input {
-    height: 5vh;
+    height: 5rem;
     width: 35vw;
     margin-top: 1rem;
     display: flex;
     text-align: flex-start;
+    justify-content: center;
     padding: 1rem;
     font-size: 1rem;
     border: none;
@@ -154,6 +166,7 @@ textarea {
     background: rgb(61, 4, 195);
 }
 
+
 @media screen and (min-width: 320px) and (max-width: 640px) {
 
     #letsTalk {
@@ -179,9 +192,8 @@ textarea {
         height: 40vw;
     }
 
-    #messageInstruction {
-        font-size: medium;
+    .openBox {
+        z-index: 9;
     }
   }
-
 
