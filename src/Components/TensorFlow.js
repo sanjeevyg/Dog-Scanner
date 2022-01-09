@@ -121,7 +121,6 @@ function App() {
 
   const {showImage = false} = phases.states[state]
 
-
   return (
     <div className="dog-model" >
       {showImage && <img alt="upload-preview" src={imageUrl} width="auto" height="500" ref={imageRef} />}

@@ -48,23 +48,17 @@
   filter: blur(40px);
 }
 
-/* .tensor-flow:before, 
-.tensor-flow:after {
-  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4)
-} */
-
 .tensor-flow.active {
   z-index: 998;
   transition: 0.2s ease;
 }
 
 .get-started {
-  transition: background .5s ease-in, transform .25s;
+  transition: .5s ease-in, transform .25s;
 }
 
 .get-started.active {
   background: #F45B69;
-  /* color: black; */
 }
 
 .get-started:hover {
@@ -459,6 +453,19 @@ section .content button {
   100% {
     transform: scale(.9) 
   }
+}
+
+#captureBtn {
+  bottom: 5rem;
+  padding: 7px 9px;
+  font-size: 1rem;
+  background: #5b6772;
+  color: #ffffff;
+  border: none;
+  font-weight: bolder;
+  border-radius: .2em;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, .7));
+  letter-spacing: .1rem;
 }
 
 
