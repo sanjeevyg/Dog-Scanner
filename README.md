@@ -1,6 +1,6 @@
 # Dog Scanner
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://tenor.com/view/funny-animals-dog-dance-cute-smile-gif-12759384)
 
 **An app to identify the different breeds of dog based on uploaded photo or captured photo**
 
