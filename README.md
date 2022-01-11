@@ -31,7 +31,7 @@ $ npm start
 - User can leave a message using a form availabe in the website for feedback
 
 ### Credits
-  [Feeback Tool](https://www.emailjs.com/)
+  [Feedback Tool](https://www.emailjs.com/)
   
 
 ### Pending Features
