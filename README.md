@@ -1,6 +1,4 @@
-#Dog Scanner
-
-![Alt Text](https://tenor.com/view/dog-puppy-cute-pet-gif-16224465)
+# Dog Scanner
 
 **An app to identify the different breeds of dog based on uploaded photo or captured photo**
 
