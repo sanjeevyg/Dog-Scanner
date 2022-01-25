@@ -1,5 +1,7 @@
 # Dog Scanner
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 **An app to identify the different breeds of dog based on uploaded photo or captured photo**
 
 ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fsyogifse)
