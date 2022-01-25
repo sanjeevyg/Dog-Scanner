@@ -1,4 +1,4 @@
-# Dog Scanner
+#Dog Scanner
 
 ![Alt Text](https://tenor.com/view/dog-puppy-cute-pet-gif-16224465)
 
