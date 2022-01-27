@@ -3,6 +3,8 @@
 
 **An app to identify the different breeds of dog based on uploaded photo or captured photo**
 
+### Prerequisites
+- Install NodeJS
 
 ### Tech Used
 - React
