@@ -1,10 +1,8 @@
 # Dog Scanner
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+<img width="841" alt="Screen Shot 2022-01-27 at 12 08 18 PM" src="https://user-images.githubusercontent.com/63537688/151409574-8c22e985-64a3-478f-be2a-9dd9aa5f506f.png">
 
 **An app to identify the different breeds of dog based on uploaded photo or captured photo**
 
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fsyogifse)
 
 ### Tech Used
 - React
